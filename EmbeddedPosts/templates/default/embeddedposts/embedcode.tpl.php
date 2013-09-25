@@ -1,0 +1,2 @@
+<div class="idno-embed" data-url="<?= $vars['object']->getUUID(); ?>"><blockquote><?= $vars['object']->getDescription();?></blockquote></div>
+<script src="<?= \Idno\Core\site()->config()->url . 'IdnoPlugins/EmbeddedPosts/js/' ?>embeddedposts.js"></script>
