@@ -11,6 +11,11 @@ Installation
  * Install into your IdnoPlugins directory and activate it in the plugins setting panel.
  * You wanted more?
 
+Todo
+----
+* [X] Link to generate embed code
+* [ ] Nice / complete embed code with CSS (we have a proof of concept right now)
+
 Licence
 -------
 
