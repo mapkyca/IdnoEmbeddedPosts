@@ -1,12 +1,10 @@
-/* 
-    Document   : embeddedposts
-    Created on : 25-Sep-2013, 11:51:19
-    Author     : icewing
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
-root { 
+div.idno-embed {
+    box-shadow: 0 3px 2px -2px #CCCCCC;
     display: block;
-}
+    margin-top: 1em;
 
+    background-color: #FFFFFF;
+    border: 1px solid #DADADA;
+    padding: 1.5em 1.5em 0;
+    
+}
