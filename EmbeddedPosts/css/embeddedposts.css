@@ -8,3 +8,25 @@ div.idno-embed {
     padding: 1.5em 1.5em 0;
     
 }
+
+
+
+
+.idno-entry .h-card {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    padding-top: 1em;
+    text-align: center;
+}
+
+.idno-object {
+    box-shadow: 0 3px 2px -2px #CCCCCC;
+    display: block;
+    margin-top: 1em;
+}
+
+.idno-content {
+    background-color: #FFFFFF;
+    border: 1px solid #DADADA;
+    padding: 1.5em 1.5em 0;
+}

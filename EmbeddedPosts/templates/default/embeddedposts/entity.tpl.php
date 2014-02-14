@@ -5,9 +5,11 @@
     </div>
 
     <div class="modal-body">
+        <textarea style='width: 98%; min-height: 200px;'>
         <?php
         echo htmlentities($this->draw('embeddedposts/embedcode'));
         ?>
+        </textarea>
     </div>
 
 
