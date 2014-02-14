@@ -1,1 +1,1 @@
-<div class="edit"><a href="#idno-embedcode-<?php echo $vars['object']->getID(); ?>" class="idno-share-button" data-toggle="modal" data-share="<?php echo $vars['object']->getID(); ?>"><i class="icon-share-alt"> </i></a></div>
+<a href="#idno-embedcode-<?php echo $vars['object']->getID(); ?>" class="idno-share-button" data-toggle="modal" data-share="<?php echo $vars['object']->getID(); ?>"><i class="icon-share-alt"> </i></a>
