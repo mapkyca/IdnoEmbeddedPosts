@@ -14,7 +14,8 @@ Installation
 Todo
 ----
 * [X] Link to generate embed code
-* [ ] Nice / complete embed code with CSS (we have a proof of concept right now)
+* [X] Nice / complete embed code with CSS (we have a proof of concept right now)
+* [ ] Change embed method away from Iframe to something similar to how twitter does it, perhaps making use of Idno's jsonp api
 
 Licence
 -------
