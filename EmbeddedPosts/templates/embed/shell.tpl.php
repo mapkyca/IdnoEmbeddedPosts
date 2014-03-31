@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <title><?= htmlspecialchars($vars['title']); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="initial-scale=1.0" media="(device-height: <?=$height;?>px)" />
+    <meta name="viewport" content="initial-scale=1.0" />
     
     <!-- Le styles -->
     <link href="<?= \Idno\Core\site()->config()->url . 'external/bootstrap/' ?>assets/css/bootstrap.css"
@@ -108,6 +108,9 @@
        links[i].target = "_blank";
     }
    
+    var viewportWidth = $(window).width();
+    var viewportHeight = $(window).height();
+    
 </script>
 </body>
 </html><?php endif; ?>
