@@ -7,6 +7,4 @@ $noschema = str_replace('https:', '', $noschema);
 $width = 500;
 $height = 200;
 
-/** &width=<?= $width; ?>&height=<?= $height; ?> */
-?>
-<iframe src="<?= $noschema; ?>?_t=embed" seamless style="border: 0px; overflow: hidden; width: <?= $width; ?>px; height: <?= $height; ?>px;"></iframe>
+?><iframe src="<?= $noschema; ?>?_t=embed" seamless style="border: 0px; overflow: hidden; width: <?= $width; ?>px; height: <?= $height; ?>px;"></iframe>
