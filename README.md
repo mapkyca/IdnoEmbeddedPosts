@@ -15,7 +15,7 @@ Todo
 ----
 * [X] Link to generate embed code
 * [X] Nice / complete embed code with CSS (we have a proof of concept right now)
-* [ ] Avoid depending on JQuery, use vanilla JS
+* [X] Avoid depending on JQuery, use vanilla JS
 * [ ] Change embed method away from Iframe to something similar to how twitter does it, perhaps making use of Idno's jsonp api
 
 Licence
