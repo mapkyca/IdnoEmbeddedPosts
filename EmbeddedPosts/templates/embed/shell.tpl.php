@@ -112,5 +112,8 @@
     var viewportHeight = $(window).height();
     
 </script>
+
+<?= $this->draw('shell/footer', $vars) ?>
+
 </body>
 </html><?php endif; ?>
