@@ -15,8 +15,6 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
                 switch ($format) {
 
                     case 'json':
-			// Set the correct header type
-			header('Content-Type: application/json');
 			
 			// Get the object we're talking about
 			if ($object = \Idno\Common\Entity::getByUUID($query)) {
