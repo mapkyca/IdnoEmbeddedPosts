@@ -14,6 +14,7 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
             if ($query) {
                 switch ($format) {
 
+		    case 'js' : $format = 'json';
                     case 'json':
 			
 			// Get the object we're talking about
