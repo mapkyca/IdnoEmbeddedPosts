@@ -1,6 +1,9 @@
 <?php
     // By default, lets just return RAW
 
+    $width = \Idno\Core\site()->currentPage()->getInput('maxwidth'); if (!$width) $width = 500;
+    $height = \Idno\Core\site()->currentPage()->getInput('maxheight'); if (!$height) $height = 300;
+
     echo json_encode([
 	// Basics
 	'version' => '1.0',
@@ -13,5 +16,7 @@
 	
 	// Raw extension
 	'type' => 'rich',
+	'width' => $width,
+	'height' => $height
 	
     ]);
