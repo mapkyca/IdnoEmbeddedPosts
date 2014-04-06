@@ -3,8 +3,10 @@ $noschema = $vars['object']->getUUID(); //substr(\Idno\Core\site()->config()->ur
 $noschema = str_replace('http:', '', $noschema);
 $noschema = str_replace('https:', '', $noschema);
 
+$width = $vars['width'];
+$height = $vars['height']; 
 
-$width = 500;
-$height = 200;
+if (!$width) $width = 500;
+if (!$height) $height = 200;
 
 ?><iframe src="<?= $noschema; ?>?_t=embed" seamless style="border: 0px; overflow: hidden; width: <?= $width; ?>px; height: <?= $height; ?>px;"></iframe>

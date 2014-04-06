@@ -2,8 +2,14 @@
     // By default, lets just return RAW
 
     $width = \Idno\Core\site()->currentPage()->getInput('maxwidth'); if (!$width) $width = 500;
-    $height = \Idno\Core\site()->currentPage()->getInput('maxheight'); if (!$height) $height = 300;
+    $height = \Idno\Core\site()->currentPage()->getInput('maxheight'); if (!$height) $height = 200;
 
+    $t = \Idno\Core\site()->template();
+    $t->setTemplateType('default');
+   
+    $t->width = $width;
+    $t->height = $height;
+    
     echo json_encode([
 	// Basics
 	'version' => '1.0',
@@ -17,6 +23,9 @@
 	// Raw extension
 	'type' => 'rich',
 	'width' => $width,
-	'height' => $height
+	'height' => $height,
 	
+	'html' => $t->draw('embeddedposts/embedcode')
     ]);
+    
+    $t->setTemplateType('');

@@ -19,9 +19,13 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
 			// Get the object we're talking about
 			if ($object = \Idno\Common\Entity::getByUUID($query)) {
 			  
-			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format);
 			    \Idno\Core\site()->template()->fallbackToDefault = false;
-			    \Idno\Core\site()->template()->__(['title' => $object->getTitle(), 'body' => $object->draw()])->drawPage();
+			    
+			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format);
+			    \Idno\Core\site()->template()->__(['title' => $object->getTitle(), 'body' => $object->draw()]);
+			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format);
+			    
+			    \Idno\Core\site()->template()->drawPage();
 			}
 			else
 			{
