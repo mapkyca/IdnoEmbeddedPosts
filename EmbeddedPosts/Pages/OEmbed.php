@@ -19,9 +19,9 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
 			// Get the object we're talking about
 			if ($object = \Idno\Common\Entity::getByUUID($query)) {
 			  
-			    $t = \Idno\Core\site()->template();
-			    $t->setTemplateType('oembed-' . $format);
-			    $t->__(['title' => $object->title, 'body' => $object->draw()])->drawPage();
+			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format);
+			    \Idno\Core\site()->template()->fallbackToDefault = false;
+			    \Idno\Core\site()->template()->__(['title' => $object->getTitle(), 'body' => $object->draw()])->drawPage();
 			}
 			else
 			{
