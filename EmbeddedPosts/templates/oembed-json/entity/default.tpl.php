@@ -12,6 +12,6 @@
 	'provider_url' => \Idno\Core\site()->config()->url,
 	
 	// Raw extension
-	'type' => 'raw',
+	'type' => 'rich',
 	
     ]);
