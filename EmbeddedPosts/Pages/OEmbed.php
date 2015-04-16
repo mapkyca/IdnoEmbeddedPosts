@@ -23,7 +23,7 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
 			  
 			    \Idno\Core\site()->template()->fallbackToDefault = false;
 			    
-			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format);
+			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format); 
 			    \Idno\Core\site()->template()->__(['title' => $object->getTitle(), 'body' => $object->draw()]);
 			    \Idno\Core\site()->template()->setTemplateType('oembed-' . $format);
 			    
