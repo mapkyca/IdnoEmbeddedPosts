@@ -15,6 +15,10 @@
                     \Idno\Core\site()->template()->extendTemplate('content/end/links','embeddedposts/share');
                     \Idno\Core\site()->template()->extendTemplate('content/end','embeddedposts/entity');
                 }
+		
+		// Handle known/known embed using oembed
+		\Idno\Core\site()->template()->extendTemplate('entity/content/embed','embeddedposts/linking/embed');
+		\Idno\Core\site()->template()->extendTemplate('shell/footer','embeddedposts/linking/footer');
             }
         }
     }
