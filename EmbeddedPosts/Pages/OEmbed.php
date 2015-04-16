@@ -9,13 +9,14 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
 
         function getContent() {
             $query = $this->getInput('url');
-            $format = $this->getInput('format');
+            $format = $this->getInput('format', 'json');
 
             if ($query) {
                 switch ($format) {
 
 		    case 'js' : $format = 'json';
-                    case 'json':
+		    case 'jsonp':  $format = 'json';
+		    case 'json':
 			
 			// Get the object we're talking about
 			if ($object = \Idno\Common\Entity::getByUUID($query)) {
