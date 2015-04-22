@@ -6,6 +6,11 @@
                 // Add oembed descovery
                  \Idno\Core\site()->template()->extendTemplate('shell/head','embeddedposts/header');
 		 
+		// Adding embedded post settings page
+		 \Idno\Core\site()->template()->extendTemplate('admin/menu/items', 'admin/embeddedposts/menu');
+		 
+		// Register admin settings
+		 \Idno\Core\site()->addPageHandler('admin/embeddedposts', '\IdnoPlugins\EmbeddedPosts\Pages\Admin');
 		 
 		// Register handler page
 		 \Idno\Core\site()->addPageHandler('/oembed', '\IdnoPlugins\EmbeddedPosts\Pages\OEmbed');
