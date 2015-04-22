@@ -25,7 +25,7 @@ namespace IdnoPlugins\EmbeddedPosts\Pages {
 
 	    if ($whitelist) {
 
-		$array = preg_split('/[\s,;:]+/', $whitelist);
+		$array = preg_split('/[\s,;]+/', $whitelist);
 		
 		\Idno\Core\site()->config->config['embeddedposts'] = [
 		    'whitelist' => $array
