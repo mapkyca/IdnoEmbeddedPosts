@@ -1,0 +1,1 @@
+<li <?php if ($_SERVER['REQUEST_URI'] == '/admin/embeddedposts/') echo 'class="active"'; ?>><a href="/admin/embeddedposts/">Embedded Posts</a></li>
