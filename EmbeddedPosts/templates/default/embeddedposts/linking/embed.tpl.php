@@ -4,17 +4,23 @@
 $embedded = '';
 $body = Idno\Core\site()->triggerEvent('url/expandintext', ['object' => $vars['object']], $vars['object']->body); 
 
-foreach ([
-    // Always activate myself
-    str_replace('/','\\/', Idno\Core\site()->config()->url),
-    
-    // TODO: Do this in an actually useful way, perhaps via friend discovery?
-    
-] as $knownknowns) { 
-    if (preg_match_all('/'.$knownknowns.'[^\s]+\/?/i', $body, $matches)) {
+$whitelist = \Idno\Core\site()->config()->embeddedposts['whitelist'];
+$whitelist[] = Idno\Core\site()->config()->url; // Always activate myself
 
-	foreach ($matches[0] as $m)
-	    $embedded .= '<div id="sc_'.md5($m).'" class="known-embed" data-url="'.$m.'"></div>';
+foreach ($whitelist as $knownknowns) { 
+    
+    $knownknowns = trim($knownknowns);
+    
+    if ($knownknowns) {
+	// Correct slashes
+	$knownknowns = str_replace('/', '\\/', $knownknowns);
+	$knownknowns = str_replace('.', '\.', $knownknowns);
+
+	if (preg_match_all('/'.$knownknowns.'[^\s]+\/?/i', $body, $matches)) {
+    
+	    foreach ($matches[0] as $m)
+		$embedded .= '<div id="sc_'.md5($m).'" class="known-embed" data-url="'.$m.'"></div>';
+	}
     }
 }
 
