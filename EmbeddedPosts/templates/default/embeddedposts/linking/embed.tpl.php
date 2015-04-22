@@ -13,7 +13,7 @@ foreach ($whitelist as $knownknowns) {
     
     if ($knownknowns) {
 	// Correct slashes
-	if ((strpos($knownknowns, 'http://') == false) && (strpos($knownknowns, 'https://') == false)) {
+	if ((strpos($knownknowns, 'http://') === false) && (strpos($knownknowns, 'https://') === false)) {
 	    $knownknowns = 'http://' . $knownknowns;
 	}
 	$knownknowns = str_replace('/', '\\/', $knownknowns);
