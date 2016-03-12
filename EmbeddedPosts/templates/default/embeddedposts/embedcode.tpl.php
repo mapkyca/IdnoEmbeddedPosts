@@ -3,8 +3,12 @@ $noschema = $vars['object']->getUUID(); //substr(\Idno\Core\site()->config()->ur
 $noschema = str_replace('http:', '', $noschema);
 $noschema = str_replace('https:', '', $noschema);
 
-$width = $vars['width'];
-$height = $vars['height']; 
+$width = null;
+if (!empty($vars['width']))
+	$width = $vars['width'];
+$height = null;
+if (!empty($vars['height']))
+    $height = $vars['height']; 
 
 if (!$width) $width = 500;
 if (!$height) $height = 200;
